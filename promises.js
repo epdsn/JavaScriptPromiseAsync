@@ -38,21 +38,21 @@ function createPost(post) {
 // .catch(err => console.log(err));
 
 //Asyn / Await example:
-async function init() {
-    await createPost({title: 'Post Three', body: 'This is post three'});
-    getPosts();
-}
-init();
-
-
-// Async await with fetch example:
-// async function fetchUsers() {
-//     const res = await fetch('https://jsonplaceholder.typicode.com/users');
-
-//     const data = await res.json();
-//     console.log(data);
+// async function init() {
+//     await createPost({title: 'Post Three', body: 'This is post three'});
+//     getPosts();
 // }
-// fetchUsers();
+// init();
+
+
+//Async await with fetch example:
+async function fetchUsers() {
+    const res = await fetch('https://jsonplaceholder.typicode.com/users');
+
+    const data = await res.json();
+    console.log(data);
+}
+fetchUsers();
 
 
 
